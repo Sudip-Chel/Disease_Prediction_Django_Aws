@@ -1,0 +1,66 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <h1 class="display-4 mb-4">Disease Prediction System</h1>
+        <p class="lead mb-5">Use our advanced machine learning models to assess your risk for various health conditions.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 bg-dark text-light border-light hover-card">
+            <div class="card-body text-center">
+                <h3 class="card-title">
+                    <i class="fas fa-heartbeat mb-3 text-danger"></i>
+                    Diabetes Prediction
+                </h3>
+                <p class="card-text">Assess your diabetes risk using key health indicators and advanced analytics.</p>
+                <a href="{% url 'diabetes_prediction' %}" class="btn btn-danger mt-3">Check Diabetes Risk</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 bg-dark text-light border-light hover-card">
+            <div class="card-body text-center">
+                <h3 class="card-title">
+                    <i class="fas fa-heart mb-3 text-danger"></i>
+                    Heart Disease Prediction
+                </h3>
+                <p class="card-text">Evaluate your heart health using comprehensive cardiac risk assessment.</p>
+                <a href="{% url 'heart_prediction' %}" class="btn btn-danger mt-3">Check Heart Disease Risk</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card bg-dark text-light border-light">
+            <div class="card-body">
+                <h3 class="text-center mb-4">How It Works</h3>
+                <div class="row">
+                    <div class="col-md-4 text-center mb-3">
+                        <div class="step-circle mb-3">1</div>
+                        <h5>Enter Your Data</h5>
+                        <p>Provide your health metrics and medical information</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3">
+                        <div class="step-circle mb-3">2</div>
+                        <h5>AI Analysis</h5>
+                        <p>Our ML models analyze your data</p>
+                    </div>
+                    <div class="col-md-4 text-center mb-3">
+                        <div class="step-circle mb-3">3</div>
+                        <h5>Get Results</h5>
+                        <p>Receive your risk assessment and recommendations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
